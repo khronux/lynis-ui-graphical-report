@@ -28,4 +28,5 @@ The PDF goes through the browser’s print dialog rather than a file download. T
 # Usage:
 python3 lynis_audit_ui.py   # run as a normal user, not with sudo
 
-# Requirements: Linux, Python 3.8+, Lynis, sudo, and a modern browser.
+# Requirements:
+Linux, Python 3.8+, Lynis, sudo, and a modern browser.
