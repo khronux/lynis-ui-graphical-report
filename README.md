@@ -1,10 +1,10 @@
 # lynis-ui-graphical-report
 Local web UI for running a full Lynis security audit in real time, with live colored output and a color-coded PDF report. Single Python file, no dependencies.
 
-Lynis Audit Console
+# Lynis Audit Console
 A single-file Python app that wraps Lynis in a local web interface, so you can run a full system security audit from your browser and export the results as a PDF.
 
-What it does:
+# What it does:
 + System info: the header shows your OS, kernel, architecture, host and Lynis version.
 + Root password: a dialog asks for it when you click Start audit. It is checked with sudo, piped to sudo -S, and never stored or logged. A wrong password is rejected before anything runs.
 + Local only: the server listens on 127.0.0.1 and uses a random per-session token. It also checks the Host header.
@@ -17,7 +17,7 @@ What it does:
 
 The PDF goes through the browser’s print dialog rather than a file download. That avoids adding extra dependencies and works offline. The report is built from Lynis’s console output, not from /var/log/lynis-report.dat.
 
-Features:
+# Features:
 + Shows your OS, kernel, architecture, host and Lynis version
 + Asks for your root/sudo password before it runs (passed to sudo -S, never stored or logged)
 + Streams the audit output live, with colored statuses and section headers
@@ -25,7 +25,7 @@ Features:
 + Builds a color-coded report with a summary, warnings, suggestions and every section, then exports it as a PDF via the browser’s print dialog (“Save as PDF”)
 + Python standard library only; the server listens on 127.0.0.1 and uses a per-session token
 
-Usage:
+# Usage:
 python3 lynis_audit_ui.py   # run as a normal user, not with sudo
 
-Requirements: Linux, Python 3.8+, Lynis, sudo, and a modern browser.
+# Requirements: Linux, Python 3.8+, Lynis, sudo, and a modern browser.
